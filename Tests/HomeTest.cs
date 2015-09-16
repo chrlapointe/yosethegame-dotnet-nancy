@@ -24,7 +24,7 @@ namespace Tests
 		public void HomePageContains_HelloYose ()
 		{
 			Assert.That(result.ContentType, Is.StringContaining("text/html"));
-			Assert.That(result.Body.AsString, Is.StringContaining("Hello Yose"));
+			Assert.That(result.Body.AsString(), Is.StringContaining("Hello Yose"));
 		}
 
 		[Test]

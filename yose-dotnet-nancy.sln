@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{D496B163-42A5-4A92-B7C8-D4F5FCB6A448}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{641FE295-C393-415A-BA15-6A3CE61CE144}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,7 +31,6 @@ Global
 		{D496B163-42A5-4A92-B7C8-D4F5FCB6A448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D496B163-42A5-4A92-B7C8-D4F5FCB6A448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Main\Main.csproj
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
