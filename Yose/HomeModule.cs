@@ -7,7 +7,7 @@ namespace Yose
 	{
 		public HomeModule ()
 		{
-			Get["/"] = _ => "Hello Yose!";
+			Get["/"] = _ => Response.AsFile( "Content/index.html", "text/html");
 		}
 	}
 }
