@@ -57,16 +57,27 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingTest.cs" />
     <Compile Include="HomeTest.cs" />
+    <Compile Include="PrimeFactors\PrimeFactorsModuleTest.cs" />
+    <Compile Include="PrimeFactors\PrimeFactorsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
       <Project>{59B6164C-72C2-4AC4-B8C3-ACE6DA885C93}</Project>
       <Name>Yose</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PrimeFactors\" />
   </ItemGroup>
 </Project>
