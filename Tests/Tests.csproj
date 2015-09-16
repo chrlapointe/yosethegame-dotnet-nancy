@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7B18B0E5-6395-469D-9279-50906732B95E}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingTest.cs" />
+    <Compile Include="HomeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
