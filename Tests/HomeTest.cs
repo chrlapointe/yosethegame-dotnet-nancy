@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Nancy.Testing;
 using Yose;
 using System.Web.Script.Serialization;
+using HtmlAgilityPack;
 
 namespace Tests
 {
@@ -24,6 +25,16 @@ namespace Tests
 		{
 			Assert.That(result.ContentType, Is.StringContaining("text/html"));
 			Assert.That(result.Body.AsString, Is.StringContaining("Hello Yose"));
+		}
+
+		[Test]
+		public void ContactLinkIsAvailable_WithIdContachLikn_PortefolioContactInformation()
+		{
+			HtmlDocument doc = new HtmlDocument();
+			doc.LoadHtml (result.Body.AsString());
+
+			HtmlNode node = doc.DocumentNode.SelectSingleNode ("//a[@id='contact-me-link']");
+			Assert.That (node, Is.Not.Null);
 		}
 	}
 }
