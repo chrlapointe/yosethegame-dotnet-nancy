@@ -37,12 +37,26 @@ namespace Tests
 		[Test]
 		public void ReturnsTheValueExpectedByYose ()
 		{
-			var reponse = DoRequest ("16", new int[] {2,2,2,2});
+			var response = DoRequest ("16", new int[] {2,2,2,2});
 
-			dynamic content = new JavaScriptSerializer ().Deserialize<dynamic>(reponse.Body.AsString());
+			dynamic content = new JavaScriptSerializer ().Deserialize<dynamic>(response.Body.AsString());
 
 			Assert.That(content["number"], Is.EqualTo(16));
 			Assert.That(content["decomposition"], Is.EqualTo(new int[] {2,2,2,2}));
+		}
+
+		[Test]
+		public void ReturnsNotANumberErrorInJSONWhenNumberParamIsAString ()
+		{
+			BrowserResponse response = browser.Get ("/primeFactors", with =>  {
+				with.HttpRequest ();
+				with.Query ("number", "AAA");
+			});
+
+			dynamic content = new JavaScriptSerializer ().Deserialize<dynamic>(response.Body.AsString());
+
+			Assert.That(content["number"], Is.EqualTo("AAA"));
+			Assert.That(content["error"], Is.EqualTo("not a number"));
 		}
 
 		private BrowserResponse DoRequest (string number , int[] result )
