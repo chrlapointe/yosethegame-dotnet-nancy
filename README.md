@@ -1,5 +1,4 @@
-[![Travis Build Status](https://travis-ci.org/chrlapointe/yosethegame-dotnet-nancy.svg?branch=master)](https://travis-ci.org/chrlapointe/yosethegame-dotnet-nancy)
-
+YoseTheGame
 I pass the First Web service challenge :)
 
 ## Get ready
