@@ -3,7 +3,6 @@ using NUnit.Framework;
 using Nancy.Testing;
 using Yose;
 using System.Web.Script.Serialization;
-using HtmlAgilityPack;
 using Nancy;
 using CsQuery;
 
