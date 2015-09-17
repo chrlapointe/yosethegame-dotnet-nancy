@@ -55,7 +55,7 @@ namespace Tests
 
 			var readmeDomElement = dom.Document.GetElementById ("readme");
 			Assert.That (readmeDomElement, Is.Not.Null);
-//COMMENT EN ATTENDANT LE PREMIER DEPLOY			Assert.That (readmeDomElement.InnerHTML, Is.StringContaining("YoseTheGame"));
+			Assert.That (readmeDomElement.InnerHTML, Is.StringContaining("YoseTheGame"));
 		}
 	}
 }
